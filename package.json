@@ -76,7 +76,9 @@
     "build:storybook": "build-storybook",
     "patch": "node -r esm scripts/patch-workspace.js",
     "create-pkg": "node scripts/create-package.js",
-    "create-version": "lerna version --conventional-commits",
-    "release": "lerna publish from-package"
+    "version:release": "lerna version --conventional-commits -y",
+    "version:pre-release": "lerna version --conventional-commits --conventional-prerelease -y",
+    "release": "lerna publish from-package --npm-tag latest -y",
+    "pre-release": "lerna publish from-package --npm-tag next"
   }
 }
