@@ -1,6 +1,6 @@
 {
   "name": "@-asap-/hello-world",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "MIT",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -10,7 +10,7 @@
     "dist"
   ],
   "dependencies": {
-    "@-asap-/string-alert": "1.0.0"
+    "@-asap-/string-alert": "^1.1.0"
   },
   "scripts": {
     "prebuild": "rimraf dist",
