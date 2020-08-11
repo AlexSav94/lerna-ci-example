@@ -3,7 +3,9 @@
 
 name: Test changes CI
 
-on: [push, pull_request]
+on: 
+  push:
+    branches: [ develop ]
 
 jobs:
   test:
