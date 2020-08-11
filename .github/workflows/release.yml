@@ -17,9 +17,14 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 12
+        registry-url: https://registry.npmjs.org/
     - run: yarn prestart
     - run: yarn build
     - run: yarn test
     - run: git config --global user.email "aleksoider@gmail.com"
     - run: git config --global user.name "AlexSav94"
     - run: yarn version:release
+    - run: yarn prestart
+    - run: yarn publish:release
+      env:
+        NODE_AUTH_TOKEN: ${{secrets.npm_token}}
