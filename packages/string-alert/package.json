@@ -9,6 +9,9 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "concurrently yarn:build:*",
@@ -17,5 +20,6 @@
     "build:types": "tsc --emitDeclarationOnly --declaration --declarationDir dist/types",
     "test": "jest --passWithNoTests",
     "test:cov": "yarn test --coverage"
-  }
+  },
+  "gitHead": "b2f34b155b8330bb943a565d4c174855484dbbae"
 }
