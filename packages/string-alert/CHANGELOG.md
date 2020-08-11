@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-rc.0](https://github.com/AlexSav94/lerna-ci-example/compare/@-asap-/string-alert@1.1.1...@-asap-/string-alert@2.0.0-rc.0) (2020-08-11)
+
+### Features
+
+- log + alert
+  ([c18b96d](https://github.com/AlexSav94/lerna-ci-example/commit/c18b96d2307f53bbafff03648c222f70d73aa91f))
+- not necessary parameters
+  ([adc4395](https://github.com/AlexSav94/lerna-ci-example/commit/adc43958ffe5b5eed5b4d160e35b4da6550f4958))
+
+### BREAKING CHANGES
+
+- empty parameters are allowed
+
+# Change Log
+
+All notable changes to this project will be documented in this file. See
+[Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
 ## [1.1.1](https://github.com/AlexSav94/lerna-ci-example/compare/@-asap-/string-alert@1.1.0...@-asap-/string-alert@1.1.1) (2020-08-11)
 
 ### Bug Fixes
