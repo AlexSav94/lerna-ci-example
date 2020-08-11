@@ -20,9 +20,6 @@ jobs:
     - run: yarn prestart
     - run: yarn build
     - run: yarn test
-    - name: Setup CI Git User
-    - run: 
-          git config --global user.email "aleksoider@gmail.com"
-          git config --global user.name "AlexSav94"
-          
+    - run: git config --global user.email "aleksoider@gmail.com"
+    - run: git config --global user.name "AlexSav94"
     - run: yarn version:release
