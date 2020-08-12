@@ -9,7 +9,7 @@ on:
 jobs:
   version:
     runs-on: ubuntu-latest
-    if: startsWith(github.ref, "release/")
+    if: startsWith(github.ref, 'release/')
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js 12
