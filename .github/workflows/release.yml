@@ -8,19 +8,7 @@ on:
     branches: [master]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-      - run: yarn prestart
-      - run: yarn build
-      - run: yarn test
-
   version:
-    needs: build
     runs-on: ubuntu-latest
 
     steps:
@@ -30,6 +18,9 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
+      - run: yarn prestart
+      - run: yarn build
+      - run: yarn test
       - run: git config --global user.email "aleksoider@gmail.com"
       - run: git config --global user.name "AlexSav94"
       - run: yarn version:release
