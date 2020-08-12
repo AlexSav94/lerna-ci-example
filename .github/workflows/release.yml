@@ -13,13 +13,16 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - run: git fetch --prune
       - name: Use Node.js 12
         uses: actions/setup-node@v1
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
       - run: yarn prestart
-      - run: yarn build
+      - run: yarn lerna run build --no-private --stream --since origin/master
       - run: yarn test
       - run: git config --global user.email "aleksoider@gmail.com"
       - run: git config --global user.name "AlexSav94"
