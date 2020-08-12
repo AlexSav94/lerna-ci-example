@@ -1,23 +1,33 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: Node.js CI
+name: pre-release CI
 
 on:
   create:
 
 jobs:
-  pre-release:
+  build:
     runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: yarn prestart
+      - run: yarn build
+      - run: yarn test
 
+  version:
+    needs: build
+    runs-on: ubuntu-latest
     if: startsWith(github.ref, "release/")
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js 12
-      uses: actions/setup-node@v1
-      with:
-        node-version: 12
-    - run: yarn prestart
-    - run: yarn build
-    - run: yarn test
-    - run: yarn version:pre-release
+      - uses: actions/checkout@v2
+      - name: Use Node.js 12
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: git config --global user.email "aleksoider@gmail.com"
+      - run: git config --global user.name "AlexSav94"
+      - run: yarn version:pre-release

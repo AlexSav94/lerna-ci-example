@@ -5,26 +5,34 @@ name: Create Release CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: yarn prestart
+      - run: yarn build
+      - run: yarn test
+
   version:
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js 12
-      uses: actions/setup-node@v1
-      with:
-        node-version: 12
-        registry-url: https://registry.npmjs.org/
-    - run: yarn prestart
-    - run: yarn build
-    - run: yarn test
-    - run: git config --global user.email "aleksoider@gmail.com"
-    - run: git config --global user.name "AlexSav94"
-    - run: yarn version:release
-    - run: yarn prestart
-    - run: yarn publish:release
-      env:
-        NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+      - uses: actions/checkout@v2
+      - name: Use Node.js 12
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
+      - run: git config --global user.email "aleksoider@gmail.com"
+      - run: git config --global user.name "AlexSav94"
+      - run: yarn version:release
+      - run: yarn publish:release
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
