@@ -9,13 +9,14 @@ on:
 jobs:
   version:
     runs-on: ubuntu-latest
-    if: startsWith(github.ref, "release/")
+    if: startsWith(github.ref, 'refs/heads/release/')
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js 12
         uses: actions/setup-node@v1
         with:
           node-version: 12
+      - run: echo ${{github.ref}}
       - run: yarn prestart
       - run: yarn build
       - run: yarn test
