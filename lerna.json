@@ -7,7 +7,7 @@
   "command": {
     "publish": {
       "conventionalCommits": true,
-      "message": "chore(release): publish %v",
+      "message": "chore(release): publish",
       "ignoreChanges": ["**/stories/**", "**/tests/**"],
       "allowBranch": ["master", "develop", "release/*"]
     },
