@@ -7,19 +7,7 @@ on:
   create:
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-      - run: yarn prestart
-      - run: yarn build
-      - run: yarn test
-
   version:
-    needs: build
     runs-on: ubuntu-latest
     if: startsWith(github.ref, "release/")
     steps:
@@ -28,6 +16,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12
+      - run: yarn prestart
+      - run: yarn build
+      - run: yarn test
       - run: git config --global user.email "aleksoider@gmail.com"
       - run: git config --global user.name "AlexSav94"
       - run: yarn version:pre-release
