@@ -10,6 +10,9 @@
       "message": "chore(release): publish %v",
       "ignoreChanges": ["**/stories/**", "**/tests/**"],
       "allowBranch": ["master", "develop", "release/*"]
+    },
+    "version": {
+      "ignoreChanges": ["**/stories/**", "**/tests/**"]
     }
   }
 }
