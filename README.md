@@ -37,7 +37,7 @@
 | :----- | :------ | :-- |
 | `master` | из `package.json` | `latest` |
 | `release/<version>` | `<version>-rc.<sha>` | `next` |
-| develop | `0.0.0-alpha/beta<sha>` | `canary` |
+| `develop` | `<version>-alpha/beta<sha>` | `canary` |
 * При PUSH в master обновляется версия, создается тэг, и публикуется версия в NPM
 * При создании ветки release/* присваивается версия *-rc.*, публикация в NPM в ручном режиме по необходимости
 * При PUSH/PULL_REQUEST в develop запускаются авто-тесты, создание альфа/бета версий и их публикация в ручном режиме по необходимости.
