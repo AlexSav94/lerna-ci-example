@@ -1,7 +1,7 @@
 import { helloWorldAlert, helloWorldLog } from "../src/index"
 
 jest.spyOn(global.console, "log")
-jest.spyOn(window, "alert")
+jest.spyOn(window, "alert").mockImplementation(() => {})
 
 test("log test", () => {
   helloWorldLog()
