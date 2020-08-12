@@ -16,7 +16,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: echo ${{github.ref}}
       - run: yarn prestart
       - run: yarn build
       - run: yarn test

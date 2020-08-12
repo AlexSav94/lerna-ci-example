@@ -5,5 +5,5 @@ test("sum test", () => {
 })
 
 test("concat test", () => {
-  expect(concat("test ", "string")).toBe("test string")
+  expect(concat("test", " string")).toBe("test string")
 })
