@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/AlexSav94/lerna-ci-example/compare/@-asap-/string-alert@2.2.0...@-asap-/string-alert@3.0.0) (2020-08-14)
+
+
+### Features
+
+* deleted method ([5b5d620](https://github.com/AlexSav94/lerna-ci-example/commit/5b5d620b181270b1c2a67386d09bcca89ece3622))
+
+
+### BREAKING CHANGES
+
+* deleted method
+
+
+
+
+
 # [2.2.0](https://github.com/AlexSav94/lerna-ci-example/compare/@-asap-/string-alert@2.1.0...@-asap-/string-alert@2.2.0) (2020-08-12)
 
 
