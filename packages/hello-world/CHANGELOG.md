@@ -1,5 +1,18 @@
 # Change Log
 
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [2.0.2](https://github.com/AlexSav94/lerna-ci-example/compare/@-asap-/hello-world@2.0.0...@-asap-/hello-world@2.0.2) (2020-08-14)
+
+**Note:** Version bump only for package @-asap-/hello-world
+
+
+
+
+
+# Change Log
+
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
