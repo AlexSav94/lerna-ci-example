@@ -1,14 +1,8 @@
-import { log, alert } from "../src/index"
+import { log } from "../src/index"
 
 jest.spyOn(global.console, "log")
-jest.spyOn(window, "alert").mockImplementation(() => {})
 
 test("log test", () => {
   log("123")
   expect(console.log).toBeCalled()
-})
-
-test("alert test", () => {
-  alert("123")
-  expect(window.alert).toBeCalled()
 })
