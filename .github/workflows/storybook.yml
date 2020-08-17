@@ -1,25 +1,32 @@
-# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
-
-name: Storybook CI
+name: Deploy Storybook to GitHub Pages
 
 on:
   push:
-    branches: [master]
+    branches:
+      - master
 
 jobs:
-  build-deploy:
+  deploy-storybook:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js 12
-        uses: actions/setup-node@v1
+
+      - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: yarn prestart
-      - run: yarn build
-      - run: yarn test
-      - run: yarn deploy-storybook:ci
+          registry-url: https://registry.npmjs.org/
+
+      - name: Cache Node Modules
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{ runner.OS }}-build-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.OS }}-build-${{ env.cache-name }}-
+            ${{ runner.OS }}-build-
+            ${{ runner.OS }}-
+      - run: yarn install
+
+      - run: yarn deploy-storybook --ci
         env:
-          GH_TOKEN: ${{ secrets.GHP_TOKEN }}
+          GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}

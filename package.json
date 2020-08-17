@@ -51,7 +51,7 @@
     "typescript": "3.9.7",
     "commitlint": "9.1.0",
     "@commitlint/config-conventional": "^9.1.1",
-    "@storybook/storybook-deployer": "2.8.6"
+    "@storybook/storybook-deployer": "2.8.5"
   },
   "scripts": {
     "prestart": "yarn && yarn bootstrap",
@@ -75,7 +75,6 @@
     "publish:pre-release": "lerna publish from-package --npm-tag next -y",
     "publish:pre-release:alpha": "lerna publish from-package --npm-tag alpha",
     "publish:pre-release:beta": "lerna publish from-package --npm-tag beta",
-    "deploy-storybook": "storybook-to-ghpages",
-    "deploy-storybook:ci": "storybook-to-ghpages -- --ci"
+    "deploy-storybook": "storybook-to-ghpages"
   }
 }
