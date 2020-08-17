@@ -30,4 +30,4 @@ jobs:
       - run: yarn test
       - run: git config --global user.email "aleksoider@gmail.com"
       - run: git config --global user.name "AlexSav94"
-      - run: yarn version:pre-release
+      - run: yarn version:pre-release -y
