@@ -73,6 +73,7 @@
     "publish:release": "lerna publish from-package --npm-tag latest -y",
     "publish:pre-release": "lerna publish from-package --npm-tag next -y",
     "publish:pre-release:alpha": "lerna publish from-package --npm-tag alpha",
-    "publish:pre-release:beta": "lerna publish from-package --npm-tag beta"
+    "publish:pre-release:beta": "lerna publish from-package --npm-tag beta",
+    "deploy-storybook": "storybook-to-ghpages -- --packages packages"
   }
 }
