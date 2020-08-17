@@ -1,6 +1,6 @@
 {
   "name": "@-asap-/simple-sum",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "license": "MIT",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
