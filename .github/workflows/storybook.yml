@@ -21,4 +21,8 @@ jobs:
     - run: yarn prestart
     - run: yarn build
     - run: yarn test
-    - run: yarn deploy-storybook -- --ci
+    - run: git config --global user.email "aleksoider@gmail.com"
+    - run: git config --global user.name "AlexSav94"
+    - run: yarn deploy-storybook -- --ci --host-token-env-variable=GITHUB_TOKEN
+      env:
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
