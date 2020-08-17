@@ -23,6 +23,6 @@ jobs:
     - run: yarn test
     - run: git config --global user.email "aleksoider@gmail.com"
     - run: git config --global user.name "AlexSav94"
-    - run: yarn deploy-storybook -- --ci --host-token-env-variable=GITHUB_TOKEN
+    - run: yarn deploy-storybook -- --ci
       env:
-        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        GH_TOKEN: AlexSav94:${{secrets.GITHUB_TOKEN}}
