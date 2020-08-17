@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.4](https://github.com/AlexSav94/lerna-ci-example/compare/@-asap-/string-alert@3.0.3...@-asap-/string-alert@3.0.4) (2020-08-17)
+
+**Note:** Version bump only for package @-asap-/string-alert
+
+
+
+
+
 ## [3.0.3](https://github.com/AlexSav94/lerna-ci-example/compare/@-asap-/string-alert@3.0.2...@-asap-/string-alert@3.0.3) (2020-08-17)
 
 **Note:** Version bump only for package @-asap-/string-alert
