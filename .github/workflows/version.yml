@@ -4,8 +4,9 @@
 name: Create Release CI
 
 on:
-  push:
+  pull_request_review:
     branches: [master]
+    types: [submitted]
 
 jobs:
   version:
@@ -34,34 +35,7 @@ jobs:
       - run: yarn prestart
       - run: yarn build
       - run: yarn test
-      - run: git config --global user.email "aleksoider@gmail.com"
-      - run: git config --global user.name "AlexSav94"
+      - run: git config --global user.name ${{github.actor}}
       - run: yarn version:release -y
-      - run: yarn publish:release -y
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-  deploy-storybook:
-    needs: version
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-          registry-url: https://registry.npmjs.org/
-
-      - name: Cache Node Modules
-        uses: actions/cache@v1
-        with:
-          path: node_modules
-          key: ${{ runner.OS }}-build-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.OS }}-build-${{ env.cache-name }}-
-            ${{ runner.OS }}-build-
-            ${{ runner.OS }}-
-      - run: yarn prestart
-
-      - run: yarn deploy-storybook --ci
-        env:
-          GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
