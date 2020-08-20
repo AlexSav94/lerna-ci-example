@@ -6,15 +6,9 @@ on:
     types: [opened, reopened]
 
 jobs:
-  log:
-    runs-on: ubuntu-latest
-    steps:
-    - run: echo ${{github.head_ref}}
-    - run: echo ${{github.ref}}
-    - run: echo ${{github.base_ref}}
   run:
     runs-on: ubuntu-latest
-    if: startsWith(github.head_ref, 'refs/heads/release/') != true
+    if: startsWith(github.head_ref, 'release/') != true
     steps:
       - uses: superbrothers/close-pull-request@v2
         with:
