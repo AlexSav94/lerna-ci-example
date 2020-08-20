@@ -1,31 +1,26 @@
 # Change Log
 
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+All notable changes to this project will be documented in this file. See
+[Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+# [3.1.0](https://github.com/AlexSav94/lerna-ci-example/compare/@-asap-/string-alert@3.0.4...@-asap-/string-alert@3.1.0) (2020-08-20)
+
+### Features
+
+- new functions
+  ([1afa792](https://github.com/AlexSav94/lerna-ci-example/commit/1afa792bcae43feb0049da169080c04a7f0d349b))
 
 ## [3.0.4](https://github.com/AlexSav94/lerna-ci-example/compare/@-asap-/string-alert@3.0.3...@-asap-/string-alert@3.0.4) (2020-08-17)
 
 **Note:** Version bump only for package @-asap-/string-alert
 
-
-
-
-
 ## [3.0.3](https://github.com/AlexSav94/lerna-ci-example/compare/@-asap-/string-alert@3.0.2...@-asap-/string-alert@3.0.3) (2020-08-17)
 
 **Note:** Version bump only for package @-asap-/string-alert
 
-
-
-
-
 ## [3.0.2](https://github.com/AlexSav94/lerna-ci-example/compare/@-asap-/string-alert@3.0.0...@-asap-/string-alert@3.0.2) (2020-08-14)
 
 **Note:** Version bump only for package @-asap-/string-alert
-
-
-
-
 
 # Change Log
 
