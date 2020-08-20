@@ -1,5 +1,21 @@
 # Change Log
 
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+# 3.2.0-rc.0 (2020-08-20)
+
+
+### Features
+
+* log all ([8adbfc4](https://github.com/AlexSav94/lerna-ci-example/commit/8adbfc4062791f2743908696e74701334d440d27))
+
+
+
+
+
+# Change Log
+
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
