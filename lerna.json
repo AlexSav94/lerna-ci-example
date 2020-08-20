@@ -11,7 +11,8 @@
       "allowBranch": "master"
     },
     "version": {
-      "ignoreChanges": ["**/stories/**", "**/tests/**", "**/*.md"]
+      "ignoreChanges": ["**/stories/**", "**/tests/**", "**/*.md"],
+      "allowBranch": ["master", "release/*", "develop"]
     }
   }
 }
