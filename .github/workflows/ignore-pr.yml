@@ -6,7 +6,12 @@ on:
     types: [opened]
 
 jobs:
+  name:
+    runs-on: ubuntu-latest
+    steps:
+       - run: echo ${{github.ref}}
   run:
+    needs: name
     runs-on: ubuntu-latest
     if: startsWith(github.ref, 'refs/heads/release/') != true
     steps:
