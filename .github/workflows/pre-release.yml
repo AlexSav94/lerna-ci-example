@@ -28,6 +28,6 @@ jobs:
       - run: yarn prestart
       - run: yarn build
       - run: yarn test
-      - run: git config --global user.email "github@jepria.org"
-      - run: git config --global user.name "jepria-private"
+      - run: git config --global user.email "aleksoider@gmail.com"
+      - run: git config --global user.name "AlexSav94"
       - run: yarn version:pre-release -y
