@@ -11,8 +11,9 @@ on:
 jobs:
   version:
     runs-on: ubuntu-latest
-    if: startsWith(github.head_ref, 'release/')
-      || startsWith(github.head_ref, 'hotfix/')
+    if:
+      startsWith(github.head_ref, 'release/') || startsWith(github.head_ref,
+      'hotfix/')
     steps:
       - uses: actions/checkout@v2
         with:
@@ -24,16 +25,6 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-
-      - name: Cache Node Modules
-        uses: actions/cache@v1
-        with:
-          path: node_modules
-          key: ${{ runner.OS }}-build-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.OS }}-build-${{ env.cache-name }}-
-            ${{ runner.OS }}-build-
-            ${{ runner.OS }}-
       - run: yarn prestart
       - run: yarn build
       - run: yarn test
