@@ -12,6 +12,7 @@ jobs:
   version:
     runs-on: ubuntu-latest
     if: startsWith(github.head_ref, 'release/')
+      || startsWith(github.head_ref, 'hotfix/')
     steps:
       - uses: actions/checkout@v2
         with:
