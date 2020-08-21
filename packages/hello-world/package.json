@@ -1,6 +1,6 @@
 {
   "name": "@-asap-/hello-world",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "license": "MIT",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -10,7 +10,7 @@
     "dist"
   ],
   "dependencies": {
-    "@-asap-/string-alert": "^3.1.0"
+    "@-asap-/string-alert": "^3.2.0"
   },
   "publishConfig": {
     "access": "public"

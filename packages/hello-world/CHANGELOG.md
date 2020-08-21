@@ -1,5 +1,32 @@
 # Change Log
 
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [2.2.1](https://github.com/AlexSav94/lerna-ci-example/compare/@-asap-/hello-world@2.2.0...@-asap-/hello-world@2.2.1) (2020-08-21)
+
+
+### Bug Fixes
+
+* logAll ([74ffe56](https://github.com/AlexSav94/lerna-ci-example/commit/74ffe56bd8e7ca0c5afe33d0abb2d175938306ad))
+
+
+
+
+
+## 2.2.1-rc.0 (2020-08-21)
+
+
+### Bug Fixes
+
+* logAll ([74ffe56](https://github.com/AlexSav94/lerna-ci-example/commit/74ffe56bd8e7ca0c5afe33d0abb2d175938306ad))
+
+
+
+
+
+# Change Log
+
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
