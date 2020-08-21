@@ -9,7 +9,7 @@ jobs:
   run:
     runs-on: ubuntu-latest
     if: startsWith(github.head_ref, 'release/') != true
-      || startsWith(github.head_ref, 'hotfix/') != true
+      && startsWith(github.head_ref, 'hotfix/') != true
     steps:
       - uses: superbrothers/close-pull-request@v2
         with:
