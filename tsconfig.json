@@ -18,7 +18,8 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "downlevelIteration": true,
-    "preserveSymlinks": true
+    "preserveSymlinks": true,
+    "allowJs": true
   },
   "include": ["packages"],
   "exclude": ["node_modules"]
