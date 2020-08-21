@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.6](https://github.com/AlexSav94/lerna-ci-example/compare/@-asap-/simple-sum@1.2.5...@-asap-/simple-sum@1.2.6) (2020-08-21)
+
+**Note:** Version bump only for package @-asap-/simple-sum
+
+
+
+
+
 ## 1.2.6-rc.0 (2020-08-21)
 
 
