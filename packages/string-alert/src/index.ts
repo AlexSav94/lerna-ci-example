@@ -6,6 +6,6 @@ export function alert(string?: string) {
   window.alert(string)
 }
 
-export function logAll(string: Array<string>) {
+export function logAll(...string: Array<string>) {
   console.log(...string)
 }
