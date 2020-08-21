@@ -1,21 +1,29 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: pre-release CI
+name: Update package versions CI
 
 on:
-  create:
+  pull_request:
+    branches: [master]
+    types: [opened]
 
 jobs:
   version:
     runs-on: ubuntu-latest
-    if: startsWith(github.ref, 'refs/heads/release/')
+    if: startsWith(github.head_ref, 'release/')
     steps:
       - uses: actions/checkout@v2
+        with:
+          ref: ${{github.head_ref}}
+          fetch-depth: 0
+      - run: git fetch --prune
       - name: Use Node.js 12
         uses: actions/setup-node@v1
         with:
           node-version: 12
+          registry-url: https://registry.npmjs.org/
+
       - name: Cache Node Modules
         uses: actions/cache@v1
         with:
@@ -28,6 +36,7 @@ jobs:
       - run: yarn prestart
       - run: yarn build
       - run: yarn test
-      - run: git config --global user.email "github@jepria.org"
-      - run: git config --global user.name "jepria-private"
-      - run: yarn version:pre-release -y
+      - run: git config --global user.name ${{github.actor}}
+      - run: yarn version:release -y
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
