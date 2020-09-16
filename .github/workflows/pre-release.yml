@@ -16,15 +16,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12
-      - name: Cache Node Modules
-        uses: actions/cache@v1
-        with:
-          path: node_modules
-          key: ${{ runner.OS }}-build-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.OS }}-build-${{ env.cache-name }}-
-            ${{ runner.OS }}-build-
-            ${{ runner.OS }}-
       - run: yarn prestart
       - run: yarn build
       - run: yarn test
